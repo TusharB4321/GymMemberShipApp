@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Gym MemberShip App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="benefit1">Access to Equipment: Gain unlimited use of professional gym equipment like treadmills, weights, and machines.
+Expert Guidance: Benefit from personal trainers and fitness classes to reach your fitness goals.
+Health Perks: Improve physical and mental health through regular exercise.
+Community Support: Join a community of fitness enthusiasts for motivation and support.</string>
+
+    <string name="benefit2">Customized Workouts: Get personalized workout plans tailored to your fitness level and goals.
+Group Classes: Enjoy diverse classes like yoga, Zumba, or spinning to make workouts fun and engaging.
+Convenient Amenities: Access locker rooms, showers, and sometimes saunas or pools for a complete experience.
+Improved Lifestyle: Build a consistent fitness routine to boost energy, mood, and overall well-being.</string>
+
+
+    <string name="benefit3"> Strength and Endurance: Enhance muscle strength and stamina with regular training sessions.
+Weight Management: Effectively lose, gain, or maintain weight with guided fitness programs.
+Access Anytime: Many gyms offer flexible hours, including 24/7 access, to fit your schedule.
+Health Monitoring: Track progress with fitness assessments and body composition analysis.</string>
+    <string name="benefit4"> Stress Relief: Regular exercise helps reduce stress and improve mental clarity.
+Skill Development: Learn new fitness techniques or sports through expert-led sessions.
+Boosted Immunity: Consistent workouts strengthen your immune system.
+Social Interaction: Meet like-minded individuals and build a supportive fitness network.</string>
+
+
+</resources>

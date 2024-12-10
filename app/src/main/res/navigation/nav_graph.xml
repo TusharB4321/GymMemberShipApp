@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.gymmembershipapp.ui.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_memberShipDetailFragment"
+            app:destination="@id/memberShipDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/memberShipDetailFragment"
+        android:name="com.example.gymmembershipapp.ui.fragments.MemberShipDetailFragment"
+        android:label="fragment_member_ship_detail"
+        tools:layout="@layout/fragment_member_ship_detail" >
+        <action
+            android:id="@+id/action_memberShipDetailFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.gymmembershipapp.ui.fragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.gymmembershipapp.ui.fragments.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_cartFragment_to_memberShipDetailFragment"
+            app:destination="@id/memberShipDetailFragment" />
+    </fragment>
+</navigation>
