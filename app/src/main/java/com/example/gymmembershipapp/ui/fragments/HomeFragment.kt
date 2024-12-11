@@ -44,32 +44,32 @@ class HomeFragment : Fragment() {
 
     private fun listMembership(list: ArrayList<MembershipModel>){
         list.add(
-            MembershipModel("Basic","3 Month","Cost: Rs.2000",
+            MembershipModel("","Basic","3 Month","Cost: Rs.2000",
                 context?.getString(R.string.benefit1)
             ))
 
         list.add(
-            MembershipModel("Basic","3 Month","Cost: Rs.2000",
+            MembershipModel("","Basic","3 Month","Cost: Rs.2000",
                 context?.getString(R.string.benefit2)
             ))
 
         list.add(
-            MembershipModel("Basic","12 Month","Cost: Rs.4000",
+            MembershipModel("","Basic","12 Month","Cost: Rs.4000",
                 context?.getString(R.string.benefit3)
             ))
 
         list.add(
-            MembershipModel("Basic","6 Month","Cost: Rs.3000",
+            MembershipModel("","Basic","6 Month","Cost: Rs.3000",
                 context?.getString(R.string.benefit4)
             ))
 
         list.add(
-            MembershipModel("Basic","3 Month","Cost: Rs.2000",
+            MembershipModel("","Basic","3 Month","Cost: Rs.2000",
                 context?.getString(R.string.benefit1)
             ))
 
         list.add(
-            MembershipModel("Basic","3 Month","Cost: Rs.2000",
+            MembershipModel("","Basic","3 Month","Cost: Rs.2000",
                 context?.getString(R.string.benefit3)
             ))
     }

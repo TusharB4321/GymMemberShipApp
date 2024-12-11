@@ -79,8 +79,9 @@ class MemberShipDetailFragment : Fragment() {
             val duration=binding.tvDuration.text.toString()
             val plan=binding.tvPlanName.text.toString()
             val benefits=binding.tvBenefits.text.toString()
+            val userId=auth.currentUser?.uid
 
-            val cartModel=MembershipModel(cost=cost, duration = duration, planName = plan, benefits = benefits)
+            val cartModel=MembershipModel(userId = userId, cost=cost, duration = duration, planName = plan, benefits = benefits)
 
             val db = FirebaseFirestore.getInstance()
 

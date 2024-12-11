@@ -13,6 +13,7 @@ import com.example.gymmembershipapp.R
 import com.example.gymmembershipapp.adapter.MembershipAdapter
 import com.example.gymmembershipapp.data.MembershipModel
 import com.example.gymmembershipapp.databinding.FragmentCartBinding
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.toObject
 
@@ -55,22 +56,27 @@ class CartFragment : Fragment() {
     @SuppressLint("NotifyDataSetChanged")
     private fun fetchCartData() {
         val db=FirebaseFirestore.getInstance()
+        val userId=FirebaseAuth.getInstance().currentUser?.uid
 
-        db.collection("Cart Details")
-            .get()
-            .addOnSuccessListener { res->
-                list.clear()
+        if (userId!=null){
+            db.collection("Cart Details")
+                .whereEqualTo("userId",userId)
+                .get()
+                .addOnSuccessListener { res->
+                    list.clear()
 
-                for (doc in res){
+                    for (doc in res){
 
-                    val cart=doc.toObject(MembershipModel::class.java)
-                    list.add(cart)
+                        val cart=doc.toObject(MembershipModel::class.java)
+                        list.add(cart)
 
+                    }
+                    membershipAdapter.notifyDataSetChanged()
+                }.addOnFailureListener { e->
+                    Toast.makeText(requireContext(), "Error fetching data: ${e.message}", Toast.LENGTH_SHORT).show()
                 }
-                membershipAdapter.notifyDataSetChanged()
-            }.addOnFailureListener { e->
-                Toast.makeText(requireContext(), "Error fetching data: ${e.message}", Toast.LENGTH_SHORT).show()
-            }
+        }
+
     }
 
 

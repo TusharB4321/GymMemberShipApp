@@ -45,13 +45,13 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //(activity as AppCompatActivity).supportActionBar?.hide()
+
         firebaseAuth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance().reference
         storage = FirebaseStorage.getInstance()
 
         val userId = firebaseAuth.currentUser?.uid ?: return
-
+        loadUserProfile(userId)
 
         // Handle image selection
         binding.camera.setOnClickListener {
@@ -78,7 +78,7 @@ class ProfileFragment : Fragment() {
             }
 
             updateProfile(userId, fullName, contactNumber)
-            loadUserProfile(userId)
+
         }
     }
 
